@@ -4,23 +4,24 @@ using namespace std;
 void Insertion(int arr[], int size)
 {
 
-    for (int i = 0; i < size; i++)
+    for (int i = 1; i < size; i++)
     {
-        int k = arr[i];
-        int j = i - 1;
+        int mins = i;
 
-        while (j >= 0 && arr[j] > k)
+        while (mins > 0 && arr[mins] < arr[mins - 1])
         {
-            arr[j + 1] = arr[j];
-            j = j - 1;
+            int sw = arr[mins];
+            arr[mins] = arr[mins - 1];
+            arr[mins - 1] = sw;
+            mins--;
         }
-        arr[j + 1] = k;
+
     }
 }
 
 int main()
 {
-    int arr[] = {5, 4, 3, 2, 1};
+    int arr[] = {5, 4, 6, 2, 1};
 
     int size = sizeof(arr) / sizeof(arr[0]);
 
