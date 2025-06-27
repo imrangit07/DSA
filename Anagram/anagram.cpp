@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     char str1[10] = "listen";
-    char str2[10] = "silentw";
+    char str2[10] = "silent";
 
     int s[26] = {0};
 
@@ -33,11 +33,11 @@ int main()
     }
     if (flag)
     {
-        cout << "Anagram";
+        cout << "Anagram"<<endl;
     }
     else
     {
-        cout << "Not Anagram";
+        cout << "Not Anagram"<<endl;
     }
 
     for(int i=0;i<26;++i){
