@@ -1,6 +1,6 @@
 #include <iostream>
 #include <map>
-#include<unordered_map>
+#include <unordered_map>
 using namespace std;
 // 1. map is colled associative container
 // 2. It is having key and value pair
@@ -22,10 +22,11 @@ int main()
         cout << p.first << ", " << p.second << endl;
     }
 
-    auto j = m.find(99);
+    auto j = m.find(99); //WITHOUT FIND SEGMENTATION FAULT
+    
     if (j != m.end())
     {
-        m.erase(j);
+        m.erase(j);  //IF NO DATA FIND SEGMENTATION FAULT
     }
     else
     {

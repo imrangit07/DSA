@@ -6,6 +6,7 @@ int main(){
     
     forward_list<int> first = {1,2,3};
     forward_list<int> second = {10,20,30,40,50};
+
     first.push_front(4);
     first.push_front(40);
     first.push_front(400);
@@ -24,7 +25,9 @@ int main(){
         cout<<f<<" ";
     }
     first.sort();
+    
     cout<<"\n---After Sort --- "<<endl;
+
     for(auto f:first)
     {
         cout<<f<<" ";
@@ -32,6 +35,7 @@ int main(){
     first.reverse();
 
      cout<<"\n---After Reverse --- "<<endl;
+
     for(auto f:first)
     {
         cout<<f<<" ";
@@ -42,6 +46,7 @@ int main(){
 
     first.merge(second);
      cout<<"\n---After Merge --- "<<endl;
+
     for(auto f:first)
     {
         cout<<f<<" ";
